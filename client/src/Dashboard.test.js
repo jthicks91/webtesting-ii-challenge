@@ -4,7 +4,10 @@ import "@testing-library/react/cleanup-after-each";
 import "jest-dom/extend-expect";
 
 import Dashboard from "./Dashboard";
+import Display from "./Display";
 
-it("renders without crashing", () => {
-  render(<Dashboard />);
+describe("<Dashboard />", () => {
+  it("renders without crashing", () => {
+    render(<Dashboard />, <Display />);
+  });
 });
